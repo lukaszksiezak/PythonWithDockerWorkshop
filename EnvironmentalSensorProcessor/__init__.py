@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 
 import azure.functions as func
-from py import process
 
 
 TEMPERATURE = "temperature"
