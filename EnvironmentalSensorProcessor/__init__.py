@@ -32,7 +32,9 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         return func.HttpResponse(status_code=401, body=str(ex))
     
     return func.HttpResponse(
-        status_code=200, body=str(kpi)
+        status_code=200, body=str({
+            "Warunki srodowiskowe": kpi
+        })
     )
 
 def dict_to_series(post_request: dict) -> pd.Series:
